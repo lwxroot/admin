@@ -10,4 +10,4 @@ IP_адресс = if($_.EventID -eq 4779 -or $_.EventID -eq 4778) {$_.Message -r
     elseif($_.EventID -eq 4800) {"ОТОШЁЛ (Блокировка экрана)"} 
     elseif($_.EventID -eq 4801) {"ВЕРНУЛСЯ (Экран разблокирован)"}
 })
-} | sort Время -Descending | Select Время, Статус, Пользователь, IP_адресс, Хост | Format-Table | Out-File "Q:\Отдел IT\Вход сотрудников\10.11.13.7_loGin__$Date.txt"
+} | sort Время -Descending | Select Время, Статус, Пользователь, IP_адресс, Хост | Format-Table
